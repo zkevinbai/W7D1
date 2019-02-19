@@ -3,27 +3,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from '../frontend/store/store';
-
-class Todo extends React.Component{
-
-    constructor(props){
-        super(props);
-    }
-
-    render(){
-        return(
-            <>
-                <h1>Todos App</h1>
-            </>
-        );
-    }
-}
-
+import rootReducer from "../frontend/reducers/root_reducer";
+import Root from '../frontend/components/root';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const root = document.getElementById("root");
-    const store = configureStore();
+    const rootElement = document.getElementById("root");
+    const store = configureStore(rootReducer);
 
     window.store = store;
-    ReactDOM.render(<Todo/>, root);
+    ReactDOM.render(<Root store={store} />, rootElement);
 })
