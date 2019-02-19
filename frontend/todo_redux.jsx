@@ -23,6 +23,7 @@ class Todo extends React.Component{
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
     const store = configureStore();
+
     window.store = store;
     ReactDOM.render(<Todo/>, root);
 })

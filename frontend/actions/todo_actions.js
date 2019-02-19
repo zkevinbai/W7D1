@@ -1,16 +1,18 @@
-export const RECIEVE_TODOS = 'RECIEVE_TODOS';
-export const RECIEVE_TODO = 'RECIEVE_TODO';
+export const RECEIVE_TODOS = 'RECEIVE_TODOS';
+export const RECEIVE_TODO = 'RECEIVE_TODO';
 
-export const recieveTodos = (todos) => {
+export const receiveTodos = (todos) => {
     return {
-        type: RECIEVE_TODOS,
+        type: RECEIVE_TODOS,
         todos: todos,
     };
 };
 
-export const recieveTodo = (todo) => {
+export const receiveTodo = (todo) => {
     return {
-        type: RECIEVE_TODO,
+        type: RECEIVE_TODO,
         todos: todo,
     };
 };
+window.receiveTodo = receiveTodo;
+window.receiveTodos = receiveTodos;
